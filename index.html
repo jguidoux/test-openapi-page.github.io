@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-<html lang=”en”>
+<html lang="en">
 <head>
-<meta charset=”UTF-8">
-<meta name=”viewport” content=”width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.12.0/swagger-ui.css" integrity="sha512-dLwOLcfflKFb4r2HiAQTqyu5GMqTErb+oECAEvyqJ6BS1Le0ZqqdHKtNB6S5Zmnu+IElXXfFqzHz8Ys3PQ4zrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<title>OpenAPI Petstore</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SwaggerUI" />
+  <title>SwaggerUI</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui.css" />
+</head>
 <body>
-<div id=”openapi”>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.12.0/swagger-ui-bundle.js" integrity="sha512-iDHqTV3gaLTFfvU/BmdNa4DUuGXbqnzGh8RqahBNCdgZ8U9lsxnqza2ljmoOQ3sH/Vdbmsoi+KHI0hhXValTeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js" crossorigin></script>
 <script>
-window.onload = function () {
-  const ui = SwaggerUIBundle({
-    url: "openapi.yaml",
-    dom_id: "#openapi"
-  })
-}
+  window.onload = () => {
+    window.ui = SwaggerUIBundle({
+      url: 'openapi.yaml',
+      dom_id: '#swagger-ui',
+    });
+  };
 </script>
 </body>
+</html>
